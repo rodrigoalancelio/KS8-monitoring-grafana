@@ -1,0 +1,29 @@
+{
+    "dashboard": {
+      "id": null,
+      "title": "Kubernetes Metrics",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "Uso de CPU por Node",
+          "targets": [
+            {
+              "expr": "sum(rate(container_cpu_usage_seconds_total{image!=\"\"}[5m])) by (node)",
+              "legendFormat": "{{node}}"
+            }
+          ]
+        },
+        {
+          "type": "graph",
+          "title": "Uso de Memória por Node",
+          "targets": [
+            {
+              "expr": "sum(container_memory_usage_bytes{image!=\"\"}) by (node)",
+              "legendFormat": "{{node}}"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

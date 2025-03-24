@@ -1,0 +1,20 @@
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de build do Helm
+charts/
+*.tgz
+
+# Ignorar configurações do Kubernetes
+.kube/
+.kube/config
+
+# Ignorar logs e saídas temporárias
+logs/
+*.log
+
+# Ignorar arquivos temporários do editor
+.vscode/
+.idea/
+*.swp
